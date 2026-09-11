@@ -1,0 +1,12 @@
+{
+  "dataset_key": "lightning",
+  "scanned_directories": [
+    "data/raw/lightning"
+  ],
+  "generated_at": "2026-09-11T18:36:47.369371Z",
+  "file_count": 0,
+  "total_size_mb": 0.0,
+  "valid_files_count": 0,
+  "status": "EMPTY_WAITING_FOR_DATA",
+  "files": []
+}

@@ -1,0 +1,25 @@
+# MEGHNETRA Inference Server Configuration
+# Enforces calibration, strict error handling, and honest operational reporting
+
+inference:
+  model_checkpoint: "models/meghnetra_convlstm_v1/model.pt"
+  scaler_file: "artifacts/scalers/training_scaler.json"
+  feature_registry: "configs/features.yaml"
+  batch_size: 1
+  device: "cpu" # Default to CPU, auto-detects CUDA when present
+
+calibration:
+  method: "temperature_scaling" # Evaluated on validation split
+  apply_calibration: true
+
+thresholds:
+  storm_advisory: 0.45
+  storm_warning: 0.70
+  cloudburst_advisory: 0.35
+  cloudburst_warning: 0.60
+  flash_flood_advisory: 0.40
+  flash_flood_warning: 0.65
+
+output:
+  formats: ["json", "netcdf"]
+  save_directory: "data/predictions"

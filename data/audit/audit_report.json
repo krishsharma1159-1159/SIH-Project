@@ -1,0 +1,89 @@
+{
+  "timestamp": "2026-09-11T11:00:00Z",
+  "config_path": "configs/data.yaml",
+  "datasets": {
+    "insat3dr": {
+      "metadata": {
+        "name": "INSAT-3DR MOSDAC",
+        "source_type": "satellite",
+        "status": "DIRECTORY_EMPTY",
+        "file_count": 0,
+        "directory": "data/insat3dr",
+        "enabled": true,
+        "file_samples": []
+      },
+      "files": [],
+      "file_count": 0,
+      "audits": []
+    },
+    "imdaa": {
+      "metadata": {
+        "name": "IMDAA High-Resolution Reanalysis",
+        "source_type": "reanalysis",
+        "status": "DIRECTORY_EMPTY",
+        "file_count": 0,
+        "directory": "data/imdaa",
+        "enabled": true,
+        "file_samples": []
+      },
+      "files": [],
+      "file_count": 0,
+      "audits": []
+    },
+    "radar": {
+      "metadata": {
+        "name": "IMD Doppler Weather Radar (DWR)",
+        "source_type": "radar",
+        "status": "DIRECTORY_EMPTY",
+        "file_count": 0,
+        "directory": "data/radar",
+        "enabled": false,
+        "file_samples": []
+      },
+      "files": [],
+      "file_count": 0,
+      "audits": []
+    },
+    "dem": {
+      "metadata": {
+        "name": "High-Resolution DEM (CartoDEM / SRTM)",
+        "source_type": "terrain",
+        "status": "DIRECTORY_EMPTY",
+        "file_count": 0,
+        "directory": "data/dem",
+        "enabled": true,
+        "file_samples": []
+      },
+      "files": [],
+      "file_count": 0,
+      "audits": []
+    },
+    "hydrology": {
+      "metadata": {
+        "name": "CWC / State Hydrological Gauges",
+        "source_type": "hydrology",
+        "status": "DIRECTORY_EMPTY",
+        "file_count": 0,
+        "directory": "data/hydrology",
+        "enabled": false,
+        "file_samples": []
+      },
+      "files": [],
+      "file_count": 0,
+      "audits": []
+    }
+  },
+  "overall_status": "AUDIT_COMPLETED",
+  "total_files_audited": 0,
+  "connected_sources": [],
+  "missing_sources": [
+    "insat3dr",
+    "imdaa",
+    "radar",
+    "dem",
+    "hydrology"
+  ],
+  "status": "WAITING_FOR_DATA",
+  "model_pipeline_locked": true,
+  "audit_executed_at": "2026-09-11T18:36:47.387446Z"
+}

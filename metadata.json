@@ -1,0 +1,6 @@
+{
+  "name": "MEGHNETRA - Weather Early Warning System",
+  "description": "AI-driven hyper-local weather early warning system for severe thunderstorms, cloudbursts, and flash floods across Uttarakhand by Team Viraj.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

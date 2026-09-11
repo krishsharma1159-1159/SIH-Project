@@ -1,0 +1,44 @@
+# MOSDAC (ISRO SAC) Data Ingestion Configuration
+# AI-driven hyper-local weather early warning system (MEGHNETRA)
+
+mosdac:
+  enabled: true
+  api_base_url: "https://mosdac.gov.in"
+
+  # Target INSAT-3DR dataset identifier (e.g. 3RIMG_L1B_STD, 3RIMG_L2B_HEM, 3RIMG_L2G_RAIN, 3RSND_L2B_PRFL)
+  dataset_id: ""
+
+  # Temporal filter bounds (YYYY-MM-DD)
+  start_date: ""
+  end_date: ""
+
+  # Uttarakhand & Foothill Domain Bounding Box
+  bounding_box:
+    min_lon: 77.5
+    min_lat: 28.5
+    max_lon: 81.2
+    max_lat: 31.5
+
+  download:
+    output_dir: "data/raw/insat3dr"
+    organize_by_date: true
+    retry_attempts: 3
+    generate_error_log: true
+    error_logs_dir: "logs/mosdac"
+    max_records: 500
+    skip_existing: true
+
+  # Catalog reference for INSAT-3DR meteorological products
+  catalog_reference:
+    - id: "3RIMG_L1B_STD"
+      name: "INSAT-3DR Imager Standard Level-1B (Visible, SWIR, TIR1, TIR2, MIR, WV)"
+    - id: "3RIMG_L2B_HEM"
+      name: "INSAT-3DR Hydro-Estimator Method (HEM) Half-Hourly Precipitation"
+    - id: "3RIMG_L2G_RAIN"
+      name: "INSAT-3DR Daily / Half-Hourly Gridded Rainfall Product"
+    - id: "3RIMG_L2B_CTP"
+      name: "INSAT-3DR Cloud Top Properties (Cloud Top Temperature & Pressure)"
+    - id: "3RIMG_L2B_UTH"
+      name: "INSAT-3DR Upper Tropospheric Humidity"
+    - id: "3RSND_L2B_PRFL"
+      name: "INSAT-3DR Atmospheric Sounder Temperature and Moisture Vertical Profiles"
