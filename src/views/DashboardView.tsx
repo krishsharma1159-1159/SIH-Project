@@ -2,6 +2,7 @@ import React from 'react';
 import { useMeghnetra } from '../context/MeghnetraContext';
 import { GisMap } from '../components/GisMap';
 import { ForecastChart } from '../components/ForecastChart';
+import { WeatherSummaryCards } from '../components/WeatherSummaryCards';
 import { HazardType, ForecastHorizonId } from '../types';
 
 export const DashboardView: React.FC = () => {
@@ -309,6 +310,9 @@ export const DashboardView: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* 2B. INTERACTIVE WEATHER SUMMARY CARDS (WIND, HUMIDITY, PRESSURE TRENDS) */}
+      <WeatherSummaryCards />
 
       {/* 3. CENTRAL HERO: LARGE WEATHER RISK GIS MAP (65%) + LOCATION INTELLIGENCE (35%) */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-4">
