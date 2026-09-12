@@ -1,0 +1,41 @@
+﻿variable,used,reason,dimensions,units,dynamic_or_static,preprocessing
+APCP_sfc,true,Primary precipitation signal — key driver for all three hazards,(time lat lon),kg/m2,dynamic,log1p then StandardScaler (train-only stats)
+IWV,true,Integrated water vapor — thermodynamic moisture column; direct cloudburst and flash-flood driver,(time lat lon),kg/m2,dynamic,StandardScaler (train-only stats)
+PRMSL_msl,true,Mean sea-level pressure — synoptic-scale circulation and cyclone indicator,(time lat lon),Pa,dynamic,StandardScaler (train-only stats)
+TMP_2m,true,2m air temperature — surface thermal state driving convective instability,(time lat lon),K,dynamic,StandardScaler (train-only stats)
+UGRD_10m,true,10m U-wind component — low-level horizontal wind; moisture transport,(time lat lon),m/s,dynamic,StandardScaler (train-only stats)
+VGRD_10m,true,10m V-wind component — low-level horizontal wind; moisture transport,(time lat lon),m/s,dynamic,StandardScaler (train-only stats)
+TMP_prl@850,true,850 hPa temperature — lower troposphere thermal state for convection,(time lat lon),K,dynamic,StandardScaler (train-only stats)
+TMP_prl@500,true,500 hPa temperature — mid-troposphere lapse rate and instability,(time lat lon),K,dynamic,StandardScaler (train-only stats)
+TMP_prl@200,true,200 hPa temperature — upper troposphere cold anomaly drives deep convection,(time lat lon),K,dynamic,StandardScaler (train-only stats)
+RH_prl@850,true,850 hPa relative humidity — low-level moisture for convection initiation,(time lat lon),%,dynamic,StandardScaler (train-only stats)
+RH_prl@500,true,500 hPa relative humidity — mid-level moisture affects convective depth,(time lat lon),%,dynamic,StandardScaler (train-only stats)
+UGRD_prl@850,true,850 hPa U-wind — lower tropospheric flow and convergence,(time lat lon),m/s,dynamic,StandardScaler (train-only stats)
+UGRD_prl@200,true,200 hPa U-wind — upper-level divergence and jet stream,(time lat lon),m/s,dynamic,StandardScaler (train-only stats)
+VGRD_prl@850,true,850 hPa V-wind — lower tropospheric meridional flow,(time lat lon),m/s,dynamic,StandardScaler (train-only stats)
+VGRD_prl@200,true,200 hPa V-wind — upper-level divergence,(time lat lon),m/s,dynamic,StandardScaler (train-only stats)
+HGT_prl@500,true,500 hPa geopotential height — synoptic ridges/troughs and mid-level dynamics,(time lat lon),m,dynamic,StandardScaler (train-only stats)
+MTERH_sfc,true,Static mean terrain elevation — orographic lifting crucial for flash-flood localization,(lat lon),m,static,Scale by 1/6000 (max is 5656m); broadcast across time dimension
+LAND_sfc,true,Static land-sea mask — discriminates marine vs continental regimes,(lat lon),binary (0/1),static,No scaling; broadcast across time dimension
+HGT_prl@850,false,Redundant with UGRD/VGRD at 850 hPa for dynamic forcing; omitted to save VRAM,,,dynamic,Excluded
+HGT_prl@200,false,Redundant with UGRD/VGRD at 200 hPa; omitted to save VRAM,,,dynamic,Excluded
+RH_prl@200,false,Very low moisture at 200 hPa for India; minimal physical contribution,,,dynamic,Excluded
+TMP_prl@925,false,Very close to TMP_2m; redundant signal for Indian domain,,,dynamic,Excluded
+TMP_prl@1000,false,Very close to TMP_2m; redundant signal,,,dynamic,Excluded
+wind_speed_10m,false,Redundant with UGRD_10m and VGRD_10m (derived from them),,,dynamic,Excluded -- use U/V directly
+wind_direction_10m,false,Angular degrees cause 0/360 discontinuity; U/V components used instead,,,dynamic,Excluded
+wind_speed_prl,false,Redundant with UGRD_prl and VGRD_prl at selected levels,,,dynamic,Excluded
+wind_direction_prl,false,Angular degrees cause 0/360 discontinuity; U/V components used instead,,,dynamic,Excluded
+specific_humidity,false,Redundant with RH_prl and IWV for ConvLSTM input purposes,,,dynamic,Excluded
+regime_id,false,Clustering output -- circular usage if fed as input to model,,,dynamic,Excluded
+regime_probability,false,Clustering output -- not a physical predictor,,,dynamic,Excluded
+extreme_precipitation_score,false,Derived pseudo-label score -- circular leakage if used as input,,,dynamic,Excluded
+extreme_moisture_score,false,Derived pseudo-label score -- circular leakage,,,dynamic,Excluded
+convective_environment_score,false,Derived pseudo-label score -- circular leakage,,,dynamic,Excluded
+dynamic_forcing_score,false,Derived pseudo-label score -- circular leakage,,,dynamic,Excluded
+thunderstorm_score,false,Pseudo-label score itself -- direct leakage if used as input,,,dynamic,Excluded
+thunderstorm_confidence,false,Pseudo-label confidence -- direct leakage,,,dynamic,Excluded
+cloudburst_score,false,Pseudo-label score -- direct leakage,,,dynamic,Excluded
+cloudburst_confidence,false,Pseudo-label confidence -- direct leakage,,,dynamic,Excluded
+flash_flood_score,false,Pseudo-label score -- direct leakage,,,dynamic,Excluded
+flash_flood_confidence,false,Pseudo-label confidence -- direct leakage,,,dynamic,Excluded
