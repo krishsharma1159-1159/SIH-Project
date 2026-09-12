@@ -17,3 +17,10 @@ artifacts/checkpoints/*
 !artifacts/checkpoints/**/.gitkeep
 __pycache__/
 *.pyc
+
+# Large Scientific Datasets (stored externally, e.g. F:/MODEL_DATA)
+*.nc
+*.nc4
+*.h5
+*.hdf
+*.hdf5

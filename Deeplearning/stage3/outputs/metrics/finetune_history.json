@@ -1,0 +1,35 @@
+[
+  {
+    "phase": 1,
+    "epoch": 1,
+    "loss": 0.07358053393508227,
+    "val_loss": 0.09729394791001575,
+    "thunderstorm_pr_auc": 0.22912816506041708,
+    "cloudburst_pr_auc": 0.7954125037671782,
+    "flash_flood_pr_auc": 0.2603735155509756,
+    "mean_pr_auc": 0.4283047281261903,
+    "epoch_time_s": 2553.3
+  },
+  {
+    "phase": 2,
+    "epoch": 1,
+    "loss": 0.061472870749709696,
+    "val_loss": 0.08926892120042526,
+    "thunderstorm_pr_auc": 0.23562445975891846,
+    "cloudburst_pr_auc": 0.8022791511056495,
+    "flash_flood_pr_auc": 0.2729302028582128,
+    "mean_pr_auc": 0.43694460457426026,
+    "epoch_time_s": 3690.3
+  },
+  {
+    "phase": 2,
+    "epoch": 2,
+    "loss": 0.05874270431560241,
+    "val_loss": 0.0876723595299327,
+    "thunderstorm_pr_auc": 0.23356301176859,
+    "cloudburst_pr_auc": 0.8035524963177253,
+    "flash_flood_pr_auc": 0.2776592250054332,
+    "mean_pr_auc": 0.4382582443639162,
+    "epoch_time_s": 3110.2
+  }
+]

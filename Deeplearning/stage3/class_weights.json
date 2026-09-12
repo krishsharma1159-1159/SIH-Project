@@ -1,0 +1,27 @@
+{
+  "training_period": "2000-01-01 to 2016-12-31",
+  "note": "pos_weight = neg_count / pos_count for BCEWithLogitsLoss",
+  "weights": {
+    "thunderstorm_pseudo_label": {
+      "pos_count": 8402,
+      "neg_count": 25427758,
+      "total": 25436160,
+      "positive_rate_pct": 0.03303171547906602,
+      "pos_weight": 3026.393477743394
+    },
+    "cloudburst_pseudo_label": {
+      "pos_count": 1323158,
+      "neg_count": 24113002,
+      "total": 25436160,
+      "positive_rate_pct": 5.201877956421095,
+      "pos_weight": 18.223826632949354
+    },
+    "flash_flood_pseudo_label": {
+      "pos_count": 32343,
+      "neg_count": 25403817,
+      "total": 25436160,
+      "positive_rate_pct": 0.12715362696256038,
+      "pos_weight": 785.4502365272239
+    }
+  }
+}
