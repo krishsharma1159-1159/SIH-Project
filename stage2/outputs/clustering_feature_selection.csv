@@ -1,0 +1,25 @@
+variable,category,use_for_clustering,reason
+TMP_prl_1000,candidate clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+TMP_prl_850,candidate clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+TMP_prl_500,candidate clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+TMP_prl_200,candidate clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+RH_prl_1000,candidate clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+RH_prl_850,candidate clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+RH_prl_500,candidate clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+RH_prl_200,candidate clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+wind_speed_prl_1000,candidate clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+wind_speed_prl_850,candidate clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+wind_speed_prl_500,candidate clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+wind_speed_prl_200,candidate clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+APCP_sfc,candidate clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+PRMSL_msl,candidate clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+TMP_2m,candidate clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+wind_speed_10m,candidate clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+IWV,candidate clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+du_200_850,derived clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+dv_200_850,derived clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+convergence_850,derived clustering feature,1,Atmospheric state or physically derived dynamical/moisture feature.
+LAND_sfc,static/contextual,0,Static categorical land mask retained for context; excluded to avoid dominating atmospheric regimes.
+MTERH_sfc,static/contextual,0,Static terrain-like field retained for context; excluded because its exact semantics are not documented in Stage 1.
+wind_direction_prl,retain-only,0,Circular representation is redundant with U/V-derived speed and shear for this clustering pass.
+wind_direction_10m,retain-only,0,Circular representation excluded from the first global regime feature set.
