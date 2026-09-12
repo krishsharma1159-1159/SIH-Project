@@ -1,0 +1,143 @@
+{
+  "thunderstorm": {
+    "before_finetuning": {
+      "Threshold": 0.9873,
+      "TP": 637,
+      "FP": 2592,
+      "FN": 1100,
+      "TN": 2977559,
+      "AUROC": 0.9945,
+      "PR_AUC": 0.1867,
+      "F1_Score": 0.2565,
+      "Precision_pct": 19.73,
+      "Recall_pct": 36.67,
+      "FAR_FalseAlarm_pct": 80.27,
+      "CSI_ThreatScore": 0.1471,
+      "ETS_EquitableThreat": 0.1468,
+      "HSS_HeidkeSkill": 0.256,
+      "MCC": 0.2684,
+      "DOR": 665.23
+    },
+    "after_finetuning": {
+      "Threshold": 0.9395,
+      "TP": 533,
+      "FP": 1684,
+      "FN": 1204,
+      "TN": 2978467,
+      "AUROC": 0.995,
+      "PR_AUC": 0.1995,
+      "F1_Score": 0.2696,
+      "Precision_pct": 24.04,
+      "Recall_pct": 30.69,
+      "FAR_FalseAlarm_pct": 75.96,
+      "CSI_ThreatScore": 0.1558,
+      "ETS_EquitableThreat": 0.1555,
+      "HSS_HeidkeSkill": 0.2691,
+      "MCC": 0.2711,
+      "DOR": 782.98
+    },
+    "delta": {
+      "AUROC_diff": 0.0005,
+      "PR_AUC_diff": 0.0128,
+      "PR_AUC_pct_gain": 6.86,
+      "F1_Score_diff": 0.0131,
+      "Precision_diff_pp": 4.31,
+      "Recall_diff_pp": -5.98,
+      "CSI_diff": 0.0087
+    }
+  },
+  "cloudburst": {
+    "before_finetuning": {
+      "Threshold": 0.9253,
+      "TP": 142460,
+      "FP": 70209,
+      "FN": 45929,
+      "TN": 2723290,
+      "AUROC": 0.9807,
+      "PR_AUC": 0.7859,
+      "F1_Score": 0.7104,
+      "Precision_pct": 66.99,
+      "Recall_pct": 75.62,
+      "FAR_FalseAlarm_pct": 33.01,
+      "CSI_ThreatScore": 0.5509,
+      "ETS_EquitableThreat": 0.5263,
+      "HSS_HeidkeSkill": 0.6896,
+      "MCC": 0.6911,
+      "DOR": 120.31
+    },
+    "after_finetuning": {
+      "Threshold": 0.7036,
+      "TP": 143765,
+      "FP": 68164,
+      "FN": 44624,
+      "TN": 2725335,
+      "AUROC": 0.9817,
+      "PR_AUC": 0.7966,
+      "F1_Score": 0.7183,
+      "Precision_pct": 67.84,
+      "Recall_pct": 76.31,
+      "FAR_FalseAlarm_pct": 32.16,
+      "CSI_ThreatScore": 0.5604,
+      "ETS_EquitableThreat": 0.5362,
+      "HSS_HeidkeSkill": 0.6981,
+      "MCC": 0.6994,
+      "DOR": 128.81
+    },
+    "delta": {
+      "AUROC_diff": 0.001,
+      "PR_AUC_diff": 0.0107,
+      "PR_AUC_pct_gain": 1.36,
+      "F1_Score_diff": 0.0079,
+      "Precision_diff_pp": 0.85,
+      "Recall_diff_pp": 0.69,
+      "CSI_diff": 0.0095
+    }
+  },
+  "flash_flood": {
+    "before_finetuning": {
+      "Threshold": 0.9917,
+      "TP": 2376,
+      "FP": 5191,
+      "FN": 3799,
+      "TN": 2970522,
+      "AUROC": 0.9922,
+      "PR_AUC": 0.2881,
+      "F1_Score": 0.3458,
+      "Precision_pct": 31.4,
+      "Recall_pct": 38.48,
+      "FAR_FalseAlarm_pct": 68.6,
+      "CSI_ThreatScore": 0.209,
+      "ETS_EquitableThreat": 0.208,
+      "HSS_HeidkeSkill": 0.3443,
+      "MCC": 0.3461,
+      "DOR": 357.9
+    },
+    "after_finetuning": {
+      "Threshold": 0.8794,
+      "TP": 2672,
+      "FP": 6181,
+      "FN": 3503,
+      "TN": 2969532,
+      "AUROC": 0.9923,
+      "PR_AUC": 0.3062,
+      "F1_Score": 0.3556,
+      "Precision_pct": 30.18,
+      "Recall_pct": 43.27,
+      "FAR_FalseAlarm_pct": 69.82,
+      "CSI_ThreatScore": 0.2163,
+      "ETS_EquitableThreat": 0.2151,
+      "HSS_HeidkeSkill": 0.354,
+      "MCC": 0.3598,
+      "DOR": 366.46
+    },
+    "delta": {
+      "AUROC_diff": 0.0001,
+      "PR_AUC_diff": 0.0181,
+      "PR_AUC_pct_gain": 6.28,
+      "F1_Score_diff": 0.0098,
+      "Precision_diff_pp": -1.22,
+      "Recall_diff_pp": 4.79,
+      "CSI_diff": 0.0073
+    }
+  }
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "epoch": 1,
+    "loss": 0.21723986486386587,
+    "batches": 3103,
+    "val_loss": 0.21949479139163658,
+    "val_batches": 363,
+    "val_thunderstorm_auroc": 0.9941370836285367,
+    "val_thunderstorm_prauc": 0.18228372592877665,
+    "val_cloudburst_auroc": 0.9788606579041041,
+    "val_cloudburst_prauc": 0.7703176338032839,
+    "val_flash_flood_auroc": 0.9888286948490524,
+    "val_flash_flood_prauc": 0.17022406868370407
+  },
+  {
+    "epoch": 2,
+    "loss": 0.16736122343510323,
+    "batches": 3103,
+    "val_loss": 0.19772362178730324,
+    "val_batches": 363,
+    "val_thunderstorm_auroc": 0.9958726988648933,
+    "val_thunderstorm_prauc": 0.2105421682734799,
+    "val_cloudburst_auroc": 0.9804368530677089,
+    "val_cloudburst_prauc": 0.7827405995092901,
+    "val_flash_flood_auroc": 0.9911425653249365,
+    "val_flash_flood_prauc": 0.21458709620305771
+  },
+  {
+    "epoch": 3,
+    "loss": 0.15670092457432996,
+    "batches": 3103,
+    "val_loss": 0.19751789382807705,
+    "val_batches": 363,
+    "val_thunderstorm_auroc": 0.9953513686289692,
+    "val_thunderstorm_prauc": 0.22705920788830564,
+    "val_cloudburst_auroc": 0.9809371087883307,
+    "val_cloudburst_prauc": 0.7882939790096867,
+    "val_flash_flood_auroc": 0.9915848602964105,
+    "val_flash_flood_prauc": 0.24332553792704223
+  },
+  {
+    "epoch": 4,
+    "loss": 0.15121901162206416,
+    "batches": 3103,
+    "val_loss": 0.20346513361068438,
+    "val_batches": 363,
+    "val_thunderstorm_auroc": 0.9951249919198707,
+    "val_thunderstorm_prauc": 0.20128472065791295,
+    "val_cloudburst_auroc": 0.9815372846784166,
+    "val_cloudburst_prauc": 0.7950323898143997,
+    "val_flash_flood_auroc": 0.9914748761420381,
+    "val_flash_flood_prauc": 0.25413469107785147
+  },
+  {
+    "epoch": 5,
+    "loss": 0.14608658370755487,
+    "batches": 3103,
+    "val_loss": 0.19321282210499408,
+    "val_batches": 363,
+    "val_thunderstorm_auroc": 0.9966938861405349,
+    "val_thunderstorm_prauc": 0.215721654425354,
+    "val_cloudburst_auroc": 0.9814789534291348,
+    "val_cloudburst_prauc": 0.795365839197698,
+    "val_flash_flood_auroc": 0.9922461777300962,
+    "val_flash_flood_prauc": 0.25684380752539854
+  },
+  {
+    "epoch": 6,
+    "loss": 0.1434802016656926,
+    "batches": 3103,
+    "val_loss": 0.18901335918370213,
+    "val_batches": 363,
+    "val_thunderstorm_auroc": 0.9958321043479815,
+    "val_thunderstorm_prauc": 0.19954685830739122,
+    "val_cloudburst_auroc": 0.9819726765907821,
+    "val_cloudburst_prauc": 0.7986597140598019,
+    "val_flash_flood_auroc": 0.9923864987484612,
+    "val_flash_flood_prauc": 0.2635296083336207
+  }
+]

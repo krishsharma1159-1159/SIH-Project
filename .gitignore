@@ -3,24 +3,33 @@ build/
 dist/
 coverage/
 .DS_Store
+Thumbs.db
 *.log
 logs/
 .env
 .env.local
 .env.*.local
 !.env.example
+.venv/
+env/
+venv/
+
 data/raw/*
 !data/raw/**/.gitkeep
 data/processed/*
 !data/processed/**/.gitkeep
 artifacts/checkpoints/*
 !artifacts/checkpoints/**/.gitkeep
+
 __pycache__/
 *.pyc
+*.py[cod]
+*$py.class
 
-# Large Scientific Datasets (stored externally, e.g. F:/MODEL_DATA)
+# Large Scientific Datasets
 *.nc
 *.nc4
 *.h5
 *.hdf
 *.hdf5
+
