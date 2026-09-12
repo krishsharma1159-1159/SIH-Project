@@ -1,0 +1,62 @@
+=================================================================
+  STAGE 3 PROGRESSIVE CURRICULUM FINE-TUNING
+=================================================================
+Device: cuda
+GPU: NVIDIA GeForce RTX 3050 6GB Laptop GPU
+VRAM: 6.4 GB
+
+Full train: 24,840  |  Val: 2,920
+
+[Strategy 1] Active-season filtering (months 3-9)...
+
+pos_weights: thunderstorm=3026.4, cloudburst=18.22, flash_flood=785.5
+
+Building data loaders (batch=8)...
+  Train batches: 1793  |  Val batches: 363
+
+Loading checkpoint: C:\Users\Ishank Sharma\Desktop\SIH 2026 WINNER\stage3\stage3_outputs\best_model.pt
+Model loaded. Total: 290,595 params | Backbone: 262,656 | Each head: 9,313
+
+=================================================================
+  PHASE 1 - HEAD-ONLY (backbone FROZEN, 1 epoch)
+  LR_heads=0.0001  |  Focal gamma=2.0
+=================================================================
+Trainable params: 27,939 (heads only)
+
+--- Phase 1 | Epoch 1/1 ---
+  Train Loss: 0.0736
+  Val Loss:   0.0973  MeanPR-AUC: 0.4283  (Thunder=0.2291  Cloud=0.7954  Flood=0.2604)
+  Epoch time: 42m 33s
+  *** Best checkpoint saved (PR-AUC=0.4283) ***
+
+=================================================================
+  PHASE 2 - END-TO-END (backbone UNFROZEN, 2 epochs)
+  LR_backbone=2e-05  |  LR_heads=0.0001
+=================================================================
+Trainable params: 290,595 (all)
+
+--- Phase 2 | Epoch 1/2 ---
+  Train Loss: 0.0615
+  Val Loss:   0.0893  MeanPR-AUC: 0.4369  (Thunder=0.2356  Cloud=0.8023  Flood=0.2729)
+  Epoch time: 1h 01m 30s
+  *** Best checkpoint saved (PR-AUC=0.4369) ***
+
+--- Phase 2 | Epoch 2/2 ---
+  Train Loss: 0.0587
+  Val Loss:   0.0877  MeanPR-AUC: 0.4383  (Thunder=0.2336  Cloud=0.8036  Flood=0.2777)
+  Epoch time: 51m 50s
+  *** Best checkpoint saved (PR-AUC=0.4383) ***
+
+=================================================================
+  FINE-TUNING COMPLETE
+  Total time:      2h 35m 59s
+  Best PR-AUC:     0.4383
+  Best checkpoint: C:\Users\Ishank Sharma\Desktop\SIH 2026 WINNER\stage3\stage3_outputs\best_model_finetuned.pt
+=================================================================
+
+Epoch Summary:
+   Ph  Ep   TrnLoss   ValLoss   MeanAUC    Thdr    Cldb   Flood      Time
+  ----------------------------------------------------------------------
+    1   1    0.0736    0.0973    0.4283  0.2291  0.7954  0.2604   42m 33s
+    2   1    0.0615    0.0893    0.4369  0.2356  0.8023  0.2729 1h 01m 30s
+    2   2    0.0587    0.0877    0.4383  0.2336  0.8036  0.2777   51m 50s
