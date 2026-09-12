@@ -1,0 +1,4 @@
+label,total,positive,negative,positive_percent
+thunderstorm_pseudo_label,46379008,16031,46362977,0.03457
+cloudburst_pseudo_label,46379008,2421619,43957389,5.22137
+flash_flood_pseudo_label,46379008,57935,46321073,0.12492
