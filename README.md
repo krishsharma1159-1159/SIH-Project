@@ -362,11 +362,10 @@ The shared ConvLSTM backbone learns common spatiotemporal atmospheric representa
 
 # 📅 Dataset & Temporal Split
 
-To reduce temporal data leakage, the 1990–2020 timeline is partitioned chronologically.
+To reduce temporal data leakage, the 2000–2020 timeline is partitioned chronologically.
 
 | Period | Purpose |
 |---|---|
-| 1990–1999 | Excluded warm-up period |
 | 2000–2016 | Training |
 | 2017–2018 | Validation |
 | 2019–2020 | Held-out testing |
@@ -455,13 +454,13 @@ Severe-weather events are highly imbalanced, so event-oriented metrics such as P
 
 # 🔌 Backend & API
 
-The trained prediction system is exposed through a **FastAPI backend**.
+The trained prediction system is exposed through a **Node backend**.
 
 ```text
 Dashboard / Client
         │
         ▼
-     FastAPI
+       Node
         │
         ▼
 Prediction Service
@@ -481,24 +480,6 @@ Prediction Service
         ▼
 Dashboard / Alert Layer
 ```
-
-## API Endpoints
-
-| Method | Endpoint | Purpose |
-|---|---|---|
-| `GET` | `/health` | Check backend health |
-| `GET` | `/model/info` | Check model connection/status |
-| `POST` | `/predict/nowcast` | Request a nowcast prediction |
-
-### Swagger
-
-FastAPI provides interactive API documentation through Swagger UI:
-
-```text
-http://localhost:8000/docs
-```
-
-Swagger allows the API to be tested independently of the frontend.
 
 ---
 
@@ -531,7 +512,7 @@ Swagger allows the API to be tested independently of the frontend.
 
 ### Backend
 
-- FastAPI
+- Node
 - Uvicorn
 - Pydantic
 
