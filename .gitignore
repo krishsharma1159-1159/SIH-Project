@@ -1,0 +1,21 @@
+# Datasets (Large NetCDF files - 14+ GB each)
+*.nc
+
+# Python Virtual Environment
+.venv/
+env/
+venv/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Frontend build & dependencies
+node_modules/
+dist/
+
+# System and logs
+*.log
+.DS_Store
+Thumbs.db
